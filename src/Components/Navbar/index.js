@@ -13,13 +13,13 @@ const Navbar = (props) => {
         <img class="seg" src={Logo2} width="24px" height="24px" alt="Logo2"/>
         </div>
         </a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">Tour</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">Product</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">Features</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">Enterprise</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">Support</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">Pricing</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">Cart</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link1}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link2}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link3}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link4}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link5}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link6}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link7}</a>
       </div>
     </nav>
 };
