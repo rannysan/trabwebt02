@@ -1,0 +1,14 @@
+.icone-hover {
+    position: relative;
+}
+.icone-hover .seg {
+    visibility: hidden;
+    opacity: 0;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.icone-hover:hover .seg {
+    visibility: visible;
+    opacity: 1;
+}
