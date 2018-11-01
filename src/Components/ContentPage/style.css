@@ -4,10 +4,14 @@
     border-radius: 21px 21px 0 0;
 }
 
-.main-div{
-    width: 100%;
+.bg-dark1{
+    background-color: #343a40f1;
+}
+
+.innerTxt{
+    color: black;
 }
 
 .second-div{
-    width: 50%;
+    width: 100%;
 }

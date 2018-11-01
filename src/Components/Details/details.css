@@ -1,4 +1,17 @@
-.center{
-    width: 100%;
-    align-items: center;
+.cont-div{
+    text-align: center;
+}
+
+.gif{
+    padding-bottom: 80px;
+}
+
+#Details{
+    background-color: #343a40f1;
+    padding-bottom: 50px;
+    color: aliceblue;
+}
+#Details h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
 }
