@@ -13,11 +13,11 @@ const Navbar = (props) => {
         </a>
         <a class="py-2 d-none d-md-inline-block option-color" href={props.Ref1}>{props.link1}</a>
         <a class="py-2 d-none d-md-inline-block option-color" href={props.Ref2}>{props.link2}</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link3}</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link4}</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link5}</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link6}</a>
-        <a class="py-2 d-none d-md-inline-block option-color" href="#">{props.link7}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href={props.Ref3}>{props.link3}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href={props.Ref4}>{props.link4}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href={props.Ref5}>{props.link5}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href={props.Ref6}>{props.link6}</a>
+        <a class="py-2 d-none d-md-inline-block option-color" href={props.Ref7}>{props.link7}</a>
       </div>
     </nav>
 };

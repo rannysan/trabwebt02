@@ -1,17 +1,42 @@
 .content-div {
     width: 80%;
-    height: 300px; 
+    height: 200px; 
     border-radius: 21px 21px 0 0;
-}
-
-.bg-dark1{
-    background-color: #343a40f1;
-}
-
-.innerTxt{
-    color: black;
 }
 
 .second-div{
     width: 100%;
+}
+
+.skill{
+    font-family: 'Press Start 2P', cursive;
+}
+
+#Skills .container{
+    max-width: 40%;
+}
+
+#Skills .skill{
+    font-size: 1.2rem;
+}
+
+
+.badge-light {
+    color: #f8f9fa;
+    background-color:#343a40f1;
+}
+
+
+ .badge-light:hover {
+    color: #f8f9fa;
+    background-color:  #212529;
+}
+
+.font-all h2{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.bg-dark1{
+    background-color:#343a40f1;
+    color: #f8f9fa;
 }
