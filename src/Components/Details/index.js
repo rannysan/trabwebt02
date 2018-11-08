@@ -14,34 +14,35 @@ const Details = (props) =>{
       <div class="row">
         <div class="col-lg-3 cont-div">
           <h2>{props.Title1}</h2>
-          <p>Coloque</p>
-          <p>seus</p>
-          <p>aqui</p>
-          <p>Interesses</p>        
+          <ul>
+            <li>Games</li>
+            <li>Desenvolvimento de Games</li>
+            <li>Desenvolvimento Web</li>
+            <li>Aplicativos mobile</li>
+          </ul>       
         </div>
 
         <div class="col-lg-3 cont-div">        
           <h2>{props.Title2}</h2>
-          <p>Coloque</p>
-          <p>seus</p>
-          <p>aqui</p>
-          <p>Idiomas</p>
+          <ul>
+            <li>Português - Nativo</li>
+            <li>Inglês - Intermediário</li>            
+          </ul> 
         </div>
 
         <div class="col-lg-3 cont-div">
           <h2>{props.Title3}</h2>
-          <p>Coloque</p>
-          <p>aqui</p>
-          <p>sua</p>
-          <p>Formação</p>
+          <ul>
+            <li>2016/UTFPR - Engenharia de Software</li>            
+          </ul> 
         </div>
 
         <div class="col-lg-3 cont-div">
           <h2>{props.Title4}</h2>
-          <p>Coloque</p>
-          <p>aqui</p>
-          <p>suas</p>
-          <p>Atividades</p>
+          <ul>
+            <li>Desenvolvimento de games</li>
+            <li>Desenvolvimento Web</li>
+          </ul> 
         </div>
 
       </div>
