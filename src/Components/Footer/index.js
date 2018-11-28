@@ -1,20 +1,16 @@
 import React from 'react'
-import './footer.css';
+import Logo from 'K:/GitGood/trabwebt02/src/assets/logo.png'
 
 const Footer = (props) => {
     return <footer class="container py-5">
     <div class="row">
       <div class="col-12 col-md">
-      <img src={props.Logo} width="24px" height="24px" alt="Logo"/>
+      <img src={Logo} width="24px" height="24px" alt="Logo"/>
         <small class="d-block mb-3 text-muted">&copy; 2018</small>
       </div>
       <div class="col-6 col-md">
-        <h5>Redes Sociais</h5>
-        <div>
-          <a href="https://www.instagram.com/rannysantos/"><img src={props.Insta} class="gray" width="24px" height="24px" alt="Logo"/></a>
-          <a href="https://www.facebook.com/ranny.santos.7"><img src={props.Face} class="gray" width="24px" height="24px" alt="Logo"/></a>
-          <a href="https://github.com/rannysan"><img src={props.Git} class="gray" width="24px" height="24px" alt="Logo"/></a>         
-        </div>
+        <h5>Contatos</h5>
+        
       </div>
       <div class="col-6 col-md">
         <h5>Algum conteudo</h5>

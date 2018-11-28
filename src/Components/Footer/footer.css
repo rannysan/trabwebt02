@@ -1,9 +1,0 @@
-.gray{
-    filter: grayscale(50%);
-    margin: 6px;
-}
-
-.gray :hover{
-    filter: none;
-    filter: grayscale(0%);
-}

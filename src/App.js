@@ -16,9 +16,6 @@ import Proj5 from './assets/scrumgame.jpg';
 import Proj6 from './assets/shield.jpg';
 import Gif2 from './assets/ff2.gif';
 import Gif3 from './assets/ff3.gif';
-import Face from './assets/facebook.png';
-import Git from './assets/github.png';
-import Insta from './assets/instagran.png';
 
 
 //Components
@@ -28,10 +25,9 @@ import ContentPage from './Components/ContentPage';
 import PrincipalContent from './Components/PrincipalContent';
 import Details from './Components/Details';
 import Skill from './Components/Skill';
-import Card from './Components/Cards';
-import Card2 from './Components/Cards2';
-import Text from './Components/Text';
-import Form from './Components/Forms';
+import Card from './Components/Cards'
+import Card2 from './Components/Cards2'
+import Text from './Components/Text'
 
 
 
@@ -95,10 +91,12 @@ class App extends Component {
                                                                                 Araní ainda não tem data de lançamento confirmada, mas será lançado para PlayStation 4, PC e XBox." TxtBtn="Veja Mais"/>
                 </div>
                 <div class="col-sm">
-                  <Card Img= {Pac} CardTitle="MediaTek pretende levar o 5G para os smartphones mais baratos!" TxtCard="A parte da implantação da novidade já não parece mais ser um grande desafio para as empresas do setor de telecomunicações pelo mundo. O problema é o que vem a seguir." TxtBtn="Veja Mais"/>
+                  <Card Img= {Pac} CardTitle="Como começou a paixão por games!" TxtCard="Sempre me envolvi com as histórias dos jogos e tentava absorver o maximo possivel deles e era uma sensação maravilhosa ''estar naquele mundo''. 
+                                                                                   Creio que a vontade de passar essa sensação para frente foi um gatilho para aprender desenvolver jogos, mas eu garanto, depois do primeiro jogo feito, por mais simples que seja, você não consegue mais parar." TxtBtn="Veja Mais"/>
                 </div>
                 <div class="col-sm">
-                  <Card Img= {Rock} CardTitle="Os 5 ciberataques que você poderá sofrer em 2019, segundo a ESET" TxtCard="Vão chegando os últimos meses do ano e as empresas de cibersegurança já começam a identificar tendências de ataques para o próximo ano. Dessa vez, a ESET preparou cinco deles que provavelmente terão um aumento nos números de ocorrências." TxtBtn="Veja Mais"/>
+                  <Card Img= {Rock} CardTitle="Roqueiro tocando samba?" TxtCard="Não é segredo para ninguem que sempre estive envolvido com Baterias Universitarias e sou completamente apaixonado por isso
+                                                                            e dedico um bom tempo a isso. Mas o que ninguem sabe é que o rock é a minha maior paixão e inspiração." TxtBtn="Veja Mais"/>
                 </div>
               </div>
             </div>
@@ -143,23 +141,13 @@ class App extends Component {
         <ContentPage
           ID="About"
           BgColor="bg-dark1"
-          Title="Portfólio"
-          SubTitle=""
+          Title="Habilidades"
+          SubTitle="Segue uma lista de algumas das minhas habilidades!"
           Content= {<Text Gif={Gif2} Gif2={Gif3}/>}
           
         />
 
-        <ContentPage
-          ID="Contact"
-          BgColor="bg-light"
-          Title="Contato"
-          SubTitle="Entre em contato pelo formulário ou pelo e-mail bs.raniel@gmail.com"
-          Content= {<Form/>}
-          
-        />
-
-        <Footer Logo={Logo}  Insta={Insta} Face={Face} Git={Git}/>        
-       
+        <Footer></Footer>
 
       </Fragment>
       
