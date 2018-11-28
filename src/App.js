@@ -33,6 +33,15 @@ import Text from './Components/Text'
 
 
 class App extends Component {
+  state = {
+    bio: [
+      bio= 'testando',  
+      desc = 'testando 2'
+    ]
+};
+
+
+
   render() {
     return (
       <Fragment>
@@ -53,9 +62,7 @@ class App extends Component {
         <PrincipalContent 
           Id="Principal"
           Profile={Profile}
-          TxtH1="Raniel C. Bispo dos Santos"
-          TxtP="Algumas informações sobre Raniel"
-          TxtBtn="Currículo completo"
+          bio={this.state.bio}
         />
 
         <Details
