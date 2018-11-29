@@ -261,7 +261,7 @@ loadLink = () =>{
         <ContentPage
           ID="About"
           BgColor="bg-dark1"
-          Title="Habilidades"
+          Title="Biografia"
           SubTitle="Segue uma lista de algumas das minhas habilidades!"
           Content= {<Text Gif={Gif2} Gif2={Gif3}  text={this.state.bigbio}/>}
           
