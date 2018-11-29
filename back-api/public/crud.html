@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <title>CRUD</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src='./js/abilities.js'></script>
+    <script src='./js/interests.js'></script>
+    <script src='./js/portfolio.js'></script>
+    <script src='./js/lang.js'></script>
+    <script src='./js/formation.js'></script>
+    <script src='./js/activities.js'></script>
+    <script src='./js/profile.js'></script>
+    <script src='./js/info.js'></script>
+    <script src='./js/contact.js'></script>
+
+</head>
+
+<body>
+    <h1>Portifólio Raniel</h1>
+
+    <hr />
+    <h3>Bio</h3>
+    ID do perfil: <input id="perfIDBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="perfConButton">Consultar</button>
+    <button class="btn btn-danger" id="perfRmButton">Remover</button><br /><br />
+    Novo Nome: <input class="form-control-plaintext" id="perfNomeNameBox" type="text" size="40" />
+    Nova bio: <input id="perfMiniNameBox" type="text" size="40" />
+    Nome do arquivo(foto): <input id="perfFotoNameBox" type="text" size="20" />
+    Nome do arquivo(curriculo): <input id="perfCurriNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="perfInsButton">Inserir</button><br /><br />
+    ID do perfil ser alterado: <input id="perfAltOldIDBox" type="text" size="20" />
+    Nova Nome: <input id="perfAltNewNomeBox" type="text" size="20" />
+    Nova biografia: <input id="perfAltNewMiniBox" type="text" size="20" />
+    Nova foto: <input id="perfAltNewFotoBox" type="text" size="20" />
+    Nova curriculo: <input id="perfAltNewCurriBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="perfAltButton">Alterar Perfil</button><br /><br />
+    <button class="btn btn-outline-secondary" id="perfConAllButton">Consultar todos Perfis</button><br /><br />
+    <div id="perfStatus"></div>
+
+    <hr />
+    <h3>Editar Interesses</h3>
+    Nome Interesses: <input id="intNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="intConButton">Consultar</button>
+    <button class="btn btn-outline-secondary" id="intInsButton">Inserir</button>
+    <button class="btn btn-danger" id="intRmButton">Remover</button><br /><br />
+    Nome do Interesse a ser alterado: <input id="intAltOldNameBox" type="text" size="20" />
+    Nome do novo Interesse: <input id="intAltNewNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="intAltButton">Alterar Interesse</button><br /><br />
+    <button class="btn btn-outline-secondary" id="intConAllButton">Consultar todos Interesses</button><br /><br />
+    <div id="intStatus"></div>
+
+    <hr />
+    <h3>Editar Idiomas</h3>
+    Nome Idioma: <input id="idioNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="idioConButton">Consultar</button>
+    <button class="btn btn-outline-secondary" id="idioInsButton">Inserir</button>
+    <button class="btn btn-danger" id="idioRmButton">Remover</button><br /><br />
+    Nome do Idioma a ser alterado: <input id="idioAltOldNameBox" type="text" size="20" />
+    Nome do novo Idioma: <input id="idioAltNewNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="idioAltButton">Alterar Idioma</button><br /><br />
+    <button class="btn btn-outline-secondary" id="idioConAllButton">Consultar todos Idiomas</button><br /><br />
+    <div id="idioStatus"></div>
+
+    <hr />
+    <h3>Editar Formacao</h3>
+    Nome Formacao: <input id="formNameBox" type="text" size="40" />
+    <button class="btn btn-outline-secondary" id="formConButton">Consultar</button>
+    <button class="btn btn-outline-secondary" id="formInsButton">Inserir</button>
+    <button class="btn btn-danger" id="formRmButton">Remover</button><br /><br />
+    Nome do Formacao a ser alterado: <input id="formAltOldNameBox" type="text" size="40" />
+    Nome do novo Formacao: <input id="formAltNewNameBox" type="text" size="40" />
+    <button class="btn btn-outline-secondary" id="formAltButton">Alterar Formacao</button><br /><br />
+    <button class="btn btn-outline-secondary" id="formConAllButton">Consultar todas Formacoes</button><br /><br />
+    <div id="formStatus"></div>
+
+    <hr />
+    <h3>Editar Atividades</h3>
+    Nome Atividades: <input id="ativNameBox" type="text" size="40" />
+    <button class="btn btn-outline-secondary" id="ativConButton">Consultar</button>
+    <button class="btn btn-outline-secondary" id="ativInsButton">Inserir</button>
+    <button class="btn btn-danger" id="ativRmButton">Remover</button><br /><br />
+    Nome da Atividade a ser alterada: <input id="ativAltOldNameBox" type="text" size="40" />
+    Nome da nova Atividade: <input id="ativAltNewNameBox" type="text" size="40" />
+    <button class="btn btn-outline-secondary" id="ativAltButton">Alterar Atividade</button><br /><br />
+    <button class="btn btn-outline-secondary" id="ativConAllButton">Consultar todas Atividades</button><br /><br />
+    <div id="ativStatus"></div>
+
+    <hr />
+    <h3>Editar Habilidades</h3>
+    Nome Habilidade: <input id="habNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="habConButton">Consultar</button>
+    <button class="btn btn-outline-secondary" id="habInsButton">Inserir</button>
+    <button class="btn btn-danger" id="habRmButton">Remover</button><br /><br />
+    Nome da Habilidade a ser alterada: <input id="habAltOldNameBox" type="text" size="20" />
+    Nome da nova Habilidade: <input id="habAltNewNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="habAltButton">Alterar Habilidade</button><br /><br />
+    <button class="btn btn-outline-secondary" id="habConAllButton">Consultar todas Habilidades</button><br /><br />
+    <div id="habStatus"></div>
+
+    <hr />
+    <h3>Editar Portfolio</h3>
+    Titulo Trabalho: <input id="portNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="portConButton">Consultar</button>
+    <button class="btn btn-danger" id="portRmButton">Remover</button><br /><br />
+
+    Titulo Trabalho a ser inserido: <input id="portTitleNameBox" type="text" size="20" />
+    Descrição Trabalho a ser inserido: <input id="portDescNameBox" type="text" size="20" />
+    Link Trabalho a ser inserido: <input id="portLinkNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="portInsButton">Inserir</button><br /><br />
+
+    Titulo do Trabalho a ser alterado: <input id="portAltOldTitleBox" type="text" size="20" />
+    Titulo do novo Trabalho: <input id="portAltNewTitleBox" type="text" size="20" /><br /><br />
+    Descrição do novo Trabalho: <input id="portDescAltNameBox" type="text" size="20" />
+    Link do novo Trabalho: <input id="portLinkAltNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary"  id="portAltButton">Alterar Trabalhos</button><br /><br />
+    <button class="btn btn-outline-secondary" id="portConAllButton">Consultar todos Trabalhos</button><br /><br />
+    <div id="portStatus"></div>
+
+    <hr />
+    <h3>Editar Informações</h3>
+    ID da informação: <input id="infoIDBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="infoConButton">Consultar</button>
+    <button class="btn btn-danger" id="infoRmButton">Remover</button><br /><br />
+    Biografia a ser inserida: <textarea id="infoBioNameBox" rows="10" cols="40"></textarea>
+    Texto da profissão: <textarea id="infoJobNameBox" rows="10" cols="40"></textarea>
+    <button class="btn btn-outline-secondary" id="infoInsButton">Inserir</button><br /><br />
+    ID da informação ser alterado: <input id="infoAltOldIDBox" type="text" size="20" />
+    Nova biografia: <textarea id="infoAltNewBioBox" rows="10" cols="40"></textarea>
+    Novo texto da profissão: <textarea id="infoAltNewJobBox" rows="10" cols="40"></textarea>
+    <button class="btn btn-outline-secondary" id="infoAltButton">Alterar Informações</button><br /><br />
+    <button class="btn btn-outline-secondary" id="infoConAllButton">Consultar todas Informações</button><br /><br />
+    <div id="infoStatus"></div>
+
+    <hr />
+    <div style="background-color:lightblue">
+    <h3>Editar Links</h3>
+    ID do link: <input id="linkIDBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="linkConButton">Consultar</button>
+    <button class="btn btn-danger" id="linkRmButton">Remover</button><br /><br />
+    Link a ser inserido: <input id="linkNameBox" type="text" size="40" />
+    Nome do arquivo(Icone): <input id="linkIconNameBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="linkInsButton">Inserir</button><br /><br />
+    ID do link ser alterado: <input id="linkAltOldIDBox" type="text" size="20" />
+    Novo link: <input id="linkAltNewLinkBox" type="text" size="20" />
+    Novo icone: <input id="linkAltNewIconBox" type="text" size="20" />
+    <button class="btn btn-outline-secondary" id="linkAltButton">Alterar Link</button><br /><br />
+    <button class="btn btn-outline-secondary" id="linkConAllButton">Consultar todos Links</button><br /><br />
+    <div id="linkStatus"></div>
+</div>
+</body>
+
+
+</html>

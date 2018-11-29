@@ -25,20 +25,106 @@ import ContentPage from './Components/ContentPage';
 import PrincipalContent from './Components/PrincipalContent';
 import Details from './Components/Details';
 import Skill from './Components/Skill';
-import Card from './Components/Cards'
-import Card2 from './Components/Cards2'
-import Text from './Components/Text'
+import Card from './Components/Cards';
+import Card2 from './Components/Cards2';
+import Text from './Components/Text';
+import Axios from 'axios';
 
 
 
 
 class App extends Component {
   state = {
-    bio: [
-      bio= 'testando',  
-      desc = 'testando 2'
-    ]
+    perfil: [],
+    inter: [],
+    idiomas: [],
+    form: [],
+    ativ: [],
+    skills: []
+
 };
+
+componentDidMount(){
+  console.log('component');
+  this.loadPerf();
+  this.loadAtiv();
+  this.loadForm();
+  this.loadIdio();
+  this.loadInt();
+  this.loadSkill();
+}
+
+loadPerf = () =>{
+  Axios.get('http://localhost:4000/perfil')
+    .then(res =>{
+      const perf = res.data;
+      this.setState({perfil:perf})
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+}
+
+loadInt = () =>{
+  Axios.get('http://localhost:4000/interesses')
+    .then(res =>{
+      const int = res.data;
+      this.setState({inter:int})
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+}
+
+loadIdio = () =>{
+  Axios.get('http://localhost:4000/idiomas')
+    .then(res =>{
+      const idio = res.data;
+      this.setState({idiomas:idio})
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+}
+
+loadForm = () =>{
+  Axios.get('http://localhost:4000/formacao')
+    .then(res =>{
+      const form = res.data;
+      this.setState({form:form})
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+}
+
+loadAtiv = () =>{
+  Axios.get('http://localhost:4000/atividades')
+    .then(res =>{
+      const ativ = res.data;
+      this.setState({ativ:ativ})
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+}
+
+loadSkill = () =>{
+  Axios.get('http://localhost:4000/habil')
+    .then(res =>{
+      const habil = res.data;
+      this.setState({skills:habil})
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+}
 
 
 
@@ -62,7 +148,7 @@ class App extends Component {
         <PrincipalContent 
           Id="Principal"
           Profile={Profile}
-          bio={this.state.bio}
+          portf={this.state.perfil}
         />
 
         <Details
@@ -70,9 +156,13 @@ class App extends Component {
           Gif={Gif}
           //Titulos
           Title1="Interesses"
+          inter={this.state.inter}
           Title2="Idiomas"
+          idiomas={this.state.idiomas}
           Title3="Formação"
+          form={this.state.form}
           Title4="Atividades"
+          ativ={this.state.ativ}
         />
 
         {/*BgColor = bg-light ou bg-dark1 */}
@@ -81,7 +171,7 @@ class App extends Component {
           BgColor="bg-light"
           Title="Habilidades"
           SubTitle="Segue uma lista de algumas das minhas habilidades!"
-          Content= {<Skill Content="Java Script"/>}
+          Content= {<Skill skill={this.state.skills}/>}
           
         />
 
