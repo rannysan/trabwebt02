@@ -32,7 +32,7 @@ class PrincipalContent extends Component {
                                     <p className="post_desc">{e.biodados}</p>
                                 </div>
                         )}
-              <a href="#"><Button>Download</Button></a>
+              <a href="download/Curriculo.pdf" download="Curriculo.pdf"><Button>Download</Button></a>
             </div>
           </div>
         </section >

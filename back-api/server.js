@@ -293,7 +293,7 @@ app.get('/formacao/alt/:formold/:formnew', (req, res) => {
 
 //ATIVIDADES--------------------------------------------------------------
 //GET da lista de atividades
-app.get('/atividades', (req, res) => {
+app.get('/atividades', (req, res) => { 
     db.all('SELECT name FROM atividades', (err, rows) => {
         console.log(rows);
         const allAtivnames = rows.map(e => e.name);
@@ -624,13 +624,13 @@ app.get('/portfolio/alt/:portTitleOld/:portTitleNew/:portDescNew/:portLinkNew', 
     const tituloProcurado = req.params.portTitleOld;
     const tituloAlterado = req.params.portTitleNew;
     const descAlterado = req.params.portDescNew;
-    const linkAlterado = req.params.portLinkNew;
+    const dataAlterado = req.params.portLinkNew;
     db.all(
         'UPDATE portfolio SET title = $title, desc = $desc, link = $link WHERE title=$old',
         {
             $title: tituloAlterado,
             $desc: descAlterado,
-            $link: linkAlterado,
+            $link: dataAlterado,
             $old: tituloProcurado
         },
         (err, rows) => {
@@ -648,11 +648,11 @@ app.post('/portfolio/ins', (req, res) => {
     console.log(req.body.title);
 
     db.run(
-        'INSERT INTO portfolio VALUES ($title, $desc, $link)',
+        'INSERT INTO portfolio VALUES ($title, $desc, $data)',
         {
             $title: req.body.title,
             $desc: req.body.desc,
-            $link: req.body.link,
+            $data: req.body.link,
         },
         (err) => {
             if (err) {

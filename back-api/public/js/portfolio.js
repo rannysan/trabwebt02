@@ -4,7 +4,7 @@ $(document).ready(function () {
         if ($('#portNameBox').val() == '') {
             $('#portStatus').html('');
             $('#portStatus').append("<ul><li>ERRO</li><ul>");
-            $('#portNameBox').val('');
+            $('#portNameBox').val(''); 
         }
         else {
             const requestURL = 'portfolio/' + $('#portNameBox').val();
@@ -18,7 +18,7 @@ $(document).ready(function () {
                     if (data) {
                         console.log(data)
                         $('#portStatus').html('');
-                        $('#portStatus').append("<ul><li>" + data.title + "</li><li>" + data.desc + "</li><li>" + data.link + "</li><ul>");
+                        $('#portStatus').append("<ul><li>" + data.title + "</li><li>" + data.desc + "</li><li>" + data.data + "</li><ul>");
                         $('#portNameBox').val('');
                     } else {
                         $('#portStatus').html('Error: could not find user at URL: ' + requestURL);
@@ -42,7 +42,7 @@ $(document).ready(function () {
                     $('#portStatus').html('');
                     $('#portStatus').append("<ul id='listaPort'><ul>");
                     data.forEach(element => {
-                        $('#listaPort').append("<li>" + element.title + "</li><li>" + element.desc + "</li><li>" + element.link + "</li><br />");
+                        $('#listaPort').append("<li>" + element.title + "</li><li>" + element.desc + "</li><li>" + element.data + "</li><br />");
                     });
                     $('#portNameBox').val('');
                 } else {

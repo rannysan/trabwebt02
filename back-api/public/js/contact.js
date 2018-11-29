@@ -18,7 +18,7 @@ $(document).ready(function () {
                     if (data) {
                         console.log(data)
                         $('#linkStatus').html('');
-                        $('#linkStatus').append("<ul><li>" + data.name + "</li><li><a src='../img/'" + data.icon + " width = '200px'></a></li><ul>");
+                        $('#linkStatus').append("<ul><li>" + data.name + "</li><li>" + data.icon + " </li><ul>");
                         $('#linkIDBox').val('');
                     } else {
                         $('#linkStatus').html('Error: could not find user at URL: ' + requestURL);
@@ -42,7 +42,7 @@ $(document).ready(function () {
                     $('#linkStatus').html('');
                     $('#linkStatus').append("<ul id='listaLink'><ul>");
                     data.forEach(element => {
-                        $('#listaLink').append("<li>" + element.name + "</li><li><img src='../img/" + element.icon + "' width = '200px'></img></li><br />");
+                        $('#listaLink').append("<li>" + element.name + "</li><li>" + element.icon + "</li><br />");
                     });
                     $('#linkIDBox').val('');
                 } else {

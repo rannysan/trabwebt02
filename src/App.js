@@ -40,7 +40,10 @@ class App extends Component {
     idiomas: [],
     form: [],
     ativ: [],
-    skills: []
+    skills: [],
+    card2: [],
+    bigbio: [],
+    links: []
 
 };
 
@@ -52,6 +55,9 @@ componentDidMount(){
   this.loadIdio();
   this.loadInt();
   this.loadSkill();
+  this.loadCards();
+  this.loadBigBio();
+  this.loadLink();
 }
 
 loadPerf = () =>{
@@ -126,9 +132,46 @@ loadSkill = () =>{
 
 }
 
+loadCards = () =>{
+  Axios.get('http://localhost:4000/portfolio')
+    .then(res =>{
+      const card = res.data;
+      this.setState({card2:card})
+    })
+    .catch((err) =>{
+        console.log(err);
+    })
+
+}
+
+loadBigBio = () =>{
+  Axios.get('http://localhost:4000/info')
+     .then(res =>{
+       const bigbio = res.data;
+       this.setState({bigbio:bigbio})
+     })
+     .catch((err) =>{
+         console.log(err);
+     })
+
+}
+
+loadLink = () =>{
+  Axios.get('http://localhost:4000/links')
+     .then(res =>{
+       const link = res.data;
+       this.setState({links:link})
+     })
+     .catch((err) =>{
+         console.log(err);
+     })
+
+}
+
 
 
   render() {
+    console.log(this.state.links);
     return (
       <Fragment>
 
@@ -209,27 +252,7 @@ loadSkill = () =>{
             <div class="row container projectContainer">
               <Card2
                 Img= {Proj1}
-                Txt= "Primeiro trabalho com Web"
-              />
-              <Card2
-                Img= {Proj2}
-                Txt= "Treinando web com o site de casamentos"
-              />
-              <Card2
-                Img= {Proj3}
-                Txt= "Primeiro trabalho com Web com bootstrap"
-              />
-              <Card2
-                Img= {Proj4}
-                Txt= "Primeiro trabalho com Web com svg"
-              />
-              <Card2
-                Img= {Proj5}
-                Txt= "Scrum game (TCC) - Andamento"
-              />
-              <Card2
-                Img= {Proj6}
-                Txt= "Shild game - Andamento"
+                card={this.state.card2}
               />
             </div>
           }
@@ -240,11 +263,13 @@ loadSkill = () =>{
           BgColor="bg-dark1"
           Title="Habilidades"
           SubTitle="Segue uma lista de algumas das minhas habilidades!"
-          Content= {<Text Gif={Gif2} Gif2={Gif3}/>}
+          Content= {<Text Gif={Gif2} Gif2={Gif3}  text={this.state.bigbio}/>}
           
         />
 
-        <Footer></Footer>
+        <Footer
+          links={this.state.links}
+        />
 
       </Fragment>
       
